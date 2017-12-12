@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jquery start</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+               $("button").click(function(){
+                   if($("h1").is(":visible")){
+                       $("h1").hide();
+                       $("button").html("Show");
+                   }else{
+                       $("h1").show();
+                       $("button").html("Hide");
+                   }
+               });
+            });
+        </script>
+    </head>
+    <body>
+        <button>Hide</button>
+        <h1>Please don't click on magic...</h1>
+        
+    </body>
+</html>
