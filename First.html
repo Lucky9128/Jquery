@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            div{
+                background-color: red;
+                width:500px;
+                height: 500px;
+            }
+            div h1{
+                position: fixed;
+            }
+        </style>
         <title>Jquery start</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
             $(document).ready(function(){
                $("button").click(function(){
                    if($("h1").is(":visible")){
-                       $("h1").hide();
+                       $("h1").hide(1000,function(){
+                           $(this).css("color","yellow");
+                       });
                        $("button").html("Show");
                    }else{
-                       $("h1").show();
+                       $("h1").show(500,function(){
+                           $(this).css("color","red");
+                       });
                        $("button").html("Hide");
                    }
                });
+                $("h2").click(function(){
+                    for(var i=500;i>=50;i-=10){
+                        $("div").animate({height:i+"px",opacity:i/500},10);
+                        $("div").animate({width:i+"px",opacity:i/500},10);
+                    }
+                });
             });
+        
         </script>
     </head>
     <body>
         <button>Hide</button>
-        <h1>Please don't click on magic...</h1>
+        <h2>Hello</h2>
+        <div><h1>hi</h1></div>
+        
         
     </body>
 </html>

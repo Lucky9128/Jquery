@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jquery start</title>
+        <style>
+            div{
+              background-color: red;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    </head>
+    <body>
+        <h1>Please don't click on 1 magic...</h1>
+        <h1>Please don't click on 1 magic...</h1>
+        <button>Hide</button>
+        <div id="hel"></div>
+        
+        <script>
+           $(document).ready(function(){
+               $("button").click(function(){ 
+                   $("#hel").append("<h1>Append</h1>");
+                   $("#hel").prepend("<h1>Prepend</h1>");
+                   $("#hel").before("<h1>Before</h1>");});
+           });
+               $("button").dblclick(function(){
+                  $("#hel").empty(); 
+               });
+        </script>
+    </body>
+</html>
