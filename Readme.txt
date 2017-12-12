@@ -1,0 +1,1 @@
+This repo is created to store the files of my jquery learning
